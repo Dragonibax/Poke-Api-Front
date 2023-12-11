@@ -1,4 +1,6 @@
 import Link from "next/link"
+//import styles from './navegation.module.css'
+
 import { root } from "postcss"
 
 const links =[{
@@ -18,8 +20,8 @@ const links =[{
 export function Navigation ( ) {
   return(
   <header>
-    <nav>
-      <ul>
+    <nav className="nav">
+      <ul className="navul">
           {links.map(({label,route}) => (
             <li key={route}>
               <Link href={route}>
