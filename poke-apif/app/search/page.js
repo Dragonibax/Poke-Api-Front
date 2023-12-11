@@ -1,5 +1,10 @@
 export default function search ( ) {
     return (
-    <h1>Seccion de estadisticas</h1>
+    <div>
+        <h1>Seccion de estadisticas</h1>
+
+        <p>Buscar Datos</p>   
+     
+    </div>
     )
   }
