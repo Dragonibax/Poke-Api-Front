@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import {Navigation} from './components/Navegation';
+import {UserProvider} from "@/app/components/Context/UserContextProvider";
 
 export const metadata = {
   title: 'Poke-Api',
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">             
       <body>
-        <Navigation/>
-        {children}
+      <UserProvider>
+          <Navigation/>
+          {children}
+      </UserProvider>
       </body>
     </html>
   )
