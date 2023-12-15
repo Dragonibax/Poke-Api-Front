@@ -17,7 +17,7 @@ const linksNoUser =[{
   route : '/battle'
 },{
   label : 'Cuenta',
-  route : '/usuario'
+  route : '/user'
 }]
 const linksUser =[{
   label : 'Inicio',
@@ -30,10 +30,10 @@ const linksUser =[{
   route : '/battle'
 },{
   label : 'Cuenta',
-  route : '/usuario'
+  route : '/user'
 },{
     label : 'Cerrar sesion',
-    route : '/'
+    route : '/user/logout'
 }]
 
 export function Navigation ( ) {

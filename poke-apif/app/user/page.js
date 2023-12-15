@@ -1,9 +1,9 @@
 'use client'
 import {useUserContext} from "@/app/components/Context/UserContextProvider";
 import {useState} from "react";
+import Link from "next/link"
 
-
-export default function login ( ) {
+export default function cuenta( ) {
 
     const {user,loginUser,logoutUser} = useUserContext();
     const [email, setEmail] = useState('');
@@ -24,9 +24,15 @@ export default function login ( ) {
                 <button>Salir</button>
                 :
                 <>
-                <button>Iniciar sesion</button>
-                <button>Crear cuenta</button>
-                <button>Recuperar contraseña</button>
+                 <Link className="linkbotton" href={"/user/login"}>
+                    Iniciar sesion
+                </Link>
+                <Link className="linkbotton" href={"/user/newuser"}>
+                    Crear cuenta
+                </Link>
+                <Link className="linkbotton" href={"/user/findpassword"}>
+                    Recuperar contraseña
+                </Link>
                 </>
             }
         </>

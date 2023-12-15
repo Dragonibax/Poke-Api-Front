@@ -77,3 +77,10 @@ nav li.btn:hover {
   background: var(--primary);
 }
 
+.linkbotton{
+  color: red;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
