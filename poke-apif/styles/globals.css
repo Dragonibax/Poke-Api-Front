@@ -81,6 +81,12 @@ nav li.btn:hover {
   text-align: center;
   justify-content: center;
 }
+.linkbotton{
+  color: red;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
 
 .Inicio{
   background-position: center center;
@@ -170,3 +176,4 @@ nav li.btn:hover {
 .victory1{
   margin-left: 79%;
 }
+
