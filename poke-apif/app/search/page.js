@@ -12,11 +12,37 @@ export default function search ( ) {
         <h1>Seccion de estadisticas</h1>
         <p>Buscar Datos</p>  
         
+        <div className="container">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">dato1</th>
+                    <th scope="col">dato2</th>
+                    <th scope="col">dato3</th>
+                    <th scope="col">dato4</th>
+                    <th scope="col">dato5</th>
+                    <th scope="col">dato6</th>
+                    <th scope="col">dato7</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                    
 
-      <div className="tabla">
-        <h1>Mi Página con Tabla</h1>
-        <Tabla datos={datos} />
-      </div>
+              
+                
+            </tbody>
+            </table>
+          </div>
 
 
      
