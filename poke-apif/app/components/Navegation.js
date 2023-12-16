@@ -1,8 +1,8 @@
 'use client'
-import Link from "next/link"
+import Link from "next/link";
 //import styles from './navegation.module.css'
 
-import { root } from "postcss"
+import { root } from "postcss";
 import {useContext} from "react";
 import {useUserContext} from "@/app/components/Context/UserContextProvider";
 
