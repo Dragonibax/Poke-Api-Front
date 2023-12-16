@@ -1,0 +1,81 @@
+/* Aplicar estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 2, 2); /* Color del texto */
+  text-shadow:
+    -1px -1px 0 #000, /* Sombra superior izquierda */
+    1px -1px 0 #000,  /* Sombra superior derecha */
+    -1px 1px 0 #000,  /* Sombra inferior izquierda */
+    1px 1px 0 #000;   /* Sombra inferior derecha */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://wallpaperaccess.com/full/4167709.gif') center center fixed;
+  background-size: cover;
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para etiquetas, campos de entrada y botones */
+form {
+  max-width: 300px; /* Ajustar el ancho máximo según sea necesario */
+  margin: 0 auto; /* Centrar el formulario en la pantalla */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left; /* Alinear el texto a la izquierda */
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%; /* Utilizar el ancho completo */
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el enlace de cambio de formulario */
+.switch-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.switch-form a {
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px; /* Añadir un margen superior para separar los enlaces */
+}
