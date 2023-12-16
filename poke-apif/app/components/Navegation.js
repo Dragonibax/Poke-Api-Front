@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { root } from "postcss";
 import {useContext} from "react";
-import {useUserContext} from "@/app/components/Context/UserContextProvider";
+import {useUserContext} from "../components/Context/UserContextProvider";
 
 const linksNoUser =[{
   label : 'Inicio',
