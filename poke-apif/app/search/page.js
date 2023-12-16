@@ -1,51 +1,61 @@
 import Tabla from "../components/Table"
 import React from 'react';
 
+
 const datos = [
   { campo1: 'Valor1', campo2: 'Valor2', campo3: 'Valor3', campo4: 'Valor4', campo5: 'Valor5', campo6: 'Valor6', campo7: 'Valor7' },
   // Agrega más filas según sea necesario
 ];
 
+
 export default function search ( ) {
+    
     return (
     <div>
         <h1>Seccion de estadisticas</h1>
         <p>Buscar Datos</p>  
+
+        <h2>Tabla de estadisticas de las Batallas Pokemon</h2>
         
-        <div className="container">
         <table>
-            <thead>
-                <tr>
-                    <th scope="col">dato1</th>
-                    <th scope="col">dato2</th>
-                    <th scope="col">dato3</th>
-                    <th scope="col">dato4</th>
-                    <th scope="col">dato5</th>
-                    <th scope="col">dato6</th>
-                    <th scope="col">dato7</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
-                    
+         <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>DATO1</th>
+                <th>DATO2</th>
+                <th>DATO3</th>
+                <th>DATO4</th>
+                <th>DATO5</th>
+            </tr>
+         </thead>
+         <tbody id="data">
 
-              
-                
-            </tbody>
-            </table>
-          </div>
+         </tbody>
+        </table>
 
+{/* <script>
+ let url ='http://localhost:8081/autores';
+ fetch(url)
+     .then(response=> response.json())
+     .then(data=> mostrarData(data))
+     .catch(error=> console.log(error))
 
-     
+ const mostrarData = (data) => {
+     console.log(data)
+     let body = ''
+     for (let i = 0; i<data.length; i++){
+         body += `<tr><td>${data[i].id}</td><td>${data[i].nombre}</td><td>${data[i].dato2}</td><td>${data[i].dato3}</td><td>${data[i].dato4}</td><td>${data[i].dato5}</td><td>${data[i].dato6}</td></tr>`
+     }
+
+     document.getElementById('data').innerHTML = body
+ }
+</script> */}
+        
     </div>
+
+    
+    
+       
     )
   }
