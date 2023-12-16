@@ -4,6 +4,7 @@ import React, {createContext, useContext, useState} from 'react';
 const UserContext = createContext(undefined);
 export const UserProvider = ({children}) => {
     const usuarioMaqueta = {
+        id: "",
         nombre: '',
         apellido: '',
         edad: 0,
@@ -17,6 +18,7 @@ export const UserProvider = ({children}) => {
         const response = await fetch('http://localhost:3000/api/user');
         //const data = await response.json();
         const data = {
+            id: "555",
             nombre: 'Juan',
             apellido: 'Perez',
             edad: 25,
