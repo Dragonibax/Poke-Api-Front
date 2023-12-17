@@ -1,4 +1,4 @@
-import {UserProvider} from "@/app/components/Context/UserContextProvider";
+import {UserProvider} from "./components/Context/UserContextProvider";
 
 export default function HomePage ( ) {
   return (

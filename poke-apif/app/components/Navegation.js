@@ -1,8 +1,8 @@
 'use client'
-import Link from "next/link"
+import Link from "next/link";
 //import styles from './navegation.module.css'
 
-import { root } from "postcss"
+import { root } from "postcss";
 import {useContext} from "react";
 import {useUserContext} from "@/app/components/Context/UserContextProvider";
 
@@ -17,7 +17,7 @@ const linksNoUser =[{
   route : '/battle'
 },{
   label : 'Cuenta',
-  route : '/login'
+  route : '/user'
 }]
 const linksUser =[{
   label : 'Inicio',
@@ -30,10 +30,10 @@ const linksUser =[{
   route : '/battle'
 },{
   label : 'Cuenta',
-  route : '/login'
+  route : '/user'
 },{
     label : 'Cerrar sesion',
-    route : '/logout'
+    route : '/user/logout'
 }]
 
 export function Navigation ( ) {
