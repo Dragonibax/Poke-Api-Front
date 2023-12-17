@@ -1,5 +1,7 @@
+'use client'
 import Tabla from "../components/Table"
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios";
 
 
 const datos = [
@@ -8,7 +10,33 @@ const datos = [
 ];
 
 
+
+const url ='http://localhost:8081/autores';
+
+
 export default function search ( ) {
+    
+
+    const [data, setData] = useState([]);
+
+    let url ='http://localhost:8081/autores';
+ fetch(url)
+     .then(response=> response.json())
+     .then(data=> mostrarData(data))
+     .catch(error=> console.log(error))
+
+ const mostrarData = (data) => {
+     console.log(data)
+     let body = ''
+     for (let i = 0; i<data.length; i++){
+         body += `<tr><td>${data[i].id}</td><td>${data[i].nombre}</td><td>${data[i].dato2}</td><td>${data[i].dato3}</td><td>${data[i].dato4}</td><td>${data[i].dato5}</td><td>${data[i].dato6}</td></tr>`
+     }
+    
+
+     document.getElementById('data').innerHTML = body
+    }
+
+    
     
     return (
     <div>
