@@ -1,7 +1,7 @@
 'use client'
-import React, {createContext, useContext, useState} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 
-const UserContext = createContext(undefined);
+const UserContext = createContext();
 export const UserProvider = ({children}) => {
     const usuarioMaqueta = {
         id: "",
@@ -25,11 +25,44 @@ export const UserProvider = ({children}) => {
             email: '',
             logged: true
         };
+        //Agregar validacion de request, if response.ok? ejecuta: no guardar
         setUser(data);
+        saveUserToLocalSotrage(data);
+    }
+    const saveUserToLocalSotrage = (user) => {
+        localStorage.setItem('user', JSON.stringify(user));
+    }
+    const deleteUserFromLocalStorage = () => {
+        localStorage.removeItem('user');
+    }
+
+    const getUserFromLocalStorage = () => {
+        const user = localStorage.getItem('user');
+        return user ? JSON.parse(user) : usuarioMaqueta;
+    }
+    const existUserInLocalStorage = () => {
+        const user = localStorage.getItem('user');
+        return user ? true : false;
     }
     const logoutUser = () => {
         setUser(usuarioMaqueta);
     }
+
+    useEffect(() => {
+        if(existUserInLocalStorage()){
+            var user = getUserFromLocalStorage()
+            setUser(user);
+        }
+    },[]);
+
+    useEffect(() => {
+        if(user.logged){
+            saveUserToLocalSotrage(user);
+        }else{
+            deleteUserFromLocalStorage();
+        }
+    },[user]);
+
     return (
         <UserContext.Provider value={{user,loginUser,logoutUser}}>
             {children}
