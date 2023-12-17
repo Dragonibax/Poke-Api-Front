@@ -19,7 +19,7 @@ export default function search ( ) {
 
     const [data, setData] = useState([]);
 
-    let url ='http://localhost:8081/autores';
+    let url ='http://localhost:8081/autores'; //poner aqui url de la api a usar
  fetch(url)
      .then(response=> response.json())
      .then(data=> mostrarData(data))
@@ -36,7 +36,6 @@ export default function search ( ) {
      document.getElementById('data').innerHTML = body
     }
 
-    
     
     return (
     <div>
