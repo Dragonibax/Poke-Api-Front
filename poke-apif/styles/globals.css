@@ -43,8 +43,11 @@ a {
 
 /* navbar */
 nav {
-  margin: 20px auto 40px;
+  margin: 5px auto 1px;
   display: flex;
+  position: fixed;
+  top: 0;
+  width:100%;
   align-items: center;
   color: white;
   font-size: 25px;

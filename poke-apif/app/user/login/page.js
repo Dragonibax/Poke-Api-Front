@@ -51,7 +51,7 @@ const login = () => {
         <div className={`${commonStyles.backgroundContainer} ${commonStyles.pageContainer}`}>
             {!user.logged?
             <h1></h1>:
-            <h1>Bienvenido {user.nombre}</h1>}           
+            <h1>Bienvenido {user.user}</h1>}           
             {user.logged?
                 <button onClick={()=>logoutUser()}>Salir</button>
                 :
