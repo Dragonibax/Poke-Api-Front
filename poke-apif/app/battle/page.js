@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function battle ( ) {
   return (
     <>
-  <div>
+  <div className="battle-content">
     <h1>Seccion de combates</h1>
-      <Link className="linkbotton" href={"/battle/starbattle"}>
+      <Link className="btn10" href={"/battle/starbattle"}>
                     Iniciar Batalla
       </Link>
   </div>

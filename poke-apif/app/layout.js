@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/bottondesing.css'
 import {Navigation} from './components/Navegation';
 import {UserProvider} from "./components/Context/UserContextProvider";
 
