@@ -20,10 +20,14 @@ export default function search ( ) {
     const [data, setData] = useState([]);
 
     let url ='http://localhost:8081/autores'; //poner aqui url de la api a usar
- fetch(url)
-     .then(response=> response.json())
-     .then(data=> mostrarData(data))
-     .catch(error=> console.log(error))
+ 
+     const fechestate = () => {//nombre  sujeto a cambios
+        fetch(url)
+        .then(response=> response.json())
+        .then(data=> mostrarData(data))
+        .catch(error=> console.log(error))   
+
+     }  
 
  const mostrarData = (data) => {
      console.log(data)
@@ -57,7 +61,7 @@ export default function search ( ) {
             </tr>
          </thead>
          <tbody id="data">
-
+            
          </tbody>
         </table>
 

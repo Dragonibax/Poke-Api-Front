@@ -4,18 +4,16 @@ import React, {createContext, useContext, useEffect, useState} from 'react';
 const UserContext = createContext();
 export const UserProvider = ({children}) => {
     const usuarioMaqueta = {
-        iduser: "",
         user: '',
         logged: false
     }
     const [user, setUser] = useState(usuarioMaqueta);
     //Se manda a llamar la API de usuarios para el inicio de sesion
-    const loginUser = async (user, iduser) => {
+    const loginUser = async (user) => {
         //Modificar el cuerpo ¡¡¡Pendiente!!!
         //const response = await fetch('http://localhost:3000/api/user');
         //const data = await response.json();
         const data = {
-            iduser: iduser,
             user: user,
             logged: true
         };

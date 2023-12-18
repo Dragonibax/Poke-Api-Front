@@ -177,7 +177,7 @@ const Starbattle = () => {
   const handleBattleSubmit = async () => {
     try {
       const userData = {
-        idUsuario: user.iduser,
+        /*idUsuario: user.iduser,*/
         nombreUsuario: user.user,
         idPokemon: selectedPokemon.id,
         idPokeIA: fourthPokemonInfo.id,

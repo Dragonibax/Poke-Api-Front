@@ -30,7 +30,7 @@ const login = () => {
   
         // Si la petición es exitosa, redirige a la página principal
         if (response.ok) {
-            loginUser(username,iduser);
+            loginUser(username);
             router.push('/');
           
         } else {
