@@ -4,25 +4,19 @@ import React, {createContext, useContext, useEffect, useState} from 'react';
 const UserContext = createContext();
 export const UserProvider = ({children}) => {
     const usuarioMaqueta = {
-        id: "",
-        nombre: '',
-        apellido: '',
-        edad: 0,
-        email: '',
+        iduser: "",
+        user: '',
         logged: false
     }
     const [user, setUser] = useState(usuarioMaqueta);
     //Se manda a llamar la API de usuarios para el inicio de sesion
-    const loginUser = async (email,password) => {
+    const loginUser = async (user, iduser) => {
         //Modificar el cuerpo ¡¡¡Pendiente!!!
-        const response = await fetch('http://localhost:3000/api/user');
+        //const response = await fetch('http://localhost:3000/api/user');
         //const data = await response.json();
         const data = {
-            id: "555",
-            nombre: 'Juan',
-            apellido: 'Perez',
-            edad: 25,
-            email: '',
+            iduser: iduser,
+            user: user,
             logged: true
         };
         //Agregar validacion de request, if response.ok? ejecuta: no guardar

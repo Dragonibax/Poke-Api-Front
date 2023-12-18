@@ -5,7 +5,7 @@ import { useUserContext } from '../../components/Context/UserContextProvider';
 
 const Starbattle = () => {
 
-  const { user, loginUser, logoutUser } = useUserContext(); //para el usuario
+  const { user } = useUserContext(); //para el usuario
 
 
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -177,8 +177,8 @@ const Starbattle = () => {
   const handleBattleSubmit = async () => {
     try {
       const userData = {
-        idUsuario: user.id,
-        nombreUsuario: user.nombre,
+        idUsuario: user.iduser,
+        nombreUsuario: user.user,
         idPokemon: selectedPokemon.id,
         idPokeIA: fourthPokemonInfo.id,
         idMove: selectedAttack.id,
