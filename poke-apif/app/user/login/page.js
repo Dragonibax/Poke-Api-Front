@@ -20,7 +20,7 @@ const login = () => {
     const handleLogin = async () => {
       try {
         // Realiza la petición a la API para iniciar sesión
-        const response = await fetch('', {
+        const response = await fetch('http://localhost:8080/api/user/encoded', {
           method: 'POST',  
           headers: {
             'Content-Type': 'application/json',
