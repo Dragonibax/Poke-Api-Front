@@ -69,7 +69,7 @@
 
 .customHeader {
   text-align: center;
-  color: #333;
+  color: #f7f4f4;
   margin-bottom: 20px;
 }
 
@@ -190,11 +190,11 @@
 
 .forget {
   margin-top: 5px;
-  color: #333;
+  color: #f7f5f5;
 }
 
 .forget a {
-  color: #4caf50;
+  color: #4cafaa;
   font-weight: 600;
   text-decoration: none;
   margin-left: 5px;
