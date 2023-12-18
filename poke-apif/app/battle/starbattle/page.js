@@ -195,7 +195,10 @@ const Starbattle = () => {
 
       const data = await response.json();
       setBattleResult(data);
-
+       // Limpiar la información y mostrar solo el resultado
+      setBattleResult(null);
+      setBattleResultMessage(null);
+      setShowResult(true);
 
     } catch (error) {
       console.error('Error submitting battle:', error);
@@ -209,63 +212,70 @@ const Starbattle = () => {
         "ataquePokeIA": "fourthPokemonInfo.AtaquePokeIA",
         "tiempo": "75"
       };
+      
 
 
       setBattleResult(dataresult);
+
+
+
     }
     setBotonPresionado2(true);
+       // Limpiar la información y mostrar solo el resultado
+
   };
 
   return (
-    <div>
+    <div className='battle-content'>
       {showFourthPokemon && (
         <div>
-          <h3>Un pokemon Salvaje a aparcido:</h3>
+          <h3 className='battletitles'>Un pokemon Salvaje a aparcido:</h3>
           {fourthPokemonInfo && (
             <div>
               <p>ID: {fourthPokemonInfo.id}, Nombre: {fourthPokemonInfo.name}, Tipo: {fourthPokemonInfo.type}</p>
-              <p>HP: {fourthPokemonInfo.hp}</p>
+             
               <img src={fourthPokemonInfo.sprite} alt={fourthPokemonInfo.name} />
             </div>
           )}
 
-          <button onClick={handleOkButton} disabled={botonPresionado} >OK</button>
+          <button className='classicbotton' onClick={handleOkButton} disabled={botonPresionado} >COMBATIR</button>
+          <Link className='classicbotton'href={"/battle"}>Escapar</Link>
         </div>
       )}
 
       {showFourthPokemon && enemyselec && (
         <div>
-          <h2>Selecciona un Pokemon:</h2>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+          <h2 className='battletitles'>Selecciona un Pokemon:</h2>
+          <div className='pokeselection' style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
             {pokemonData.slice(0, 3).map((pokemon) => (
-              <div key={pokemon.id} onClick={() => handlePokemonSelect(pokemon)} style={{ cursor: 'pointer' }}>
+              <div className='centerdiv' key={pokemon.id} onClick={() => handlePokemonSelect(pokemon)} style={{ cursor: 'pointer' }}>
                 <p>{pokemon.name}</p>
-                <img src={pokemon.sprite} alt={pokemon.name} style={{ maxWidth: '50px' }} />
+                <img className='spritepokemon' src={pokemon.sprite} alt={pokemon.name} style={{ maxWidth: '100px' }} />
               </div>
             ))}
           </div>
 
           {selectedPokemon && !confirmedPokemon && (
             <div>
-              <p>Has seleccionado a: {selectedPokemon.name}</p>
-              <button onClick={handleConfirmPokemon}>Confirmar Pokemon</button>
+              <p className='battletext'>Has seleccionado a: {selectedPokemon.name}</p>
+              <button className='btn7' onClick={handleConfirmPokemon}>Confirmar Pokemon</button>
             </div>
           )}
 
           {confirmedPokemon && selectedPokemon && !confirmedAttack && (
             <div>
-              <h3>Selecciona un ataque para {selectedPokemon.name}:</h3>
-              <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '10px' }}>
+              <h3 >Selecciona un ataque para {selectedPokemon.name}:</h3>
+              <div className='battletext' style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '10px' }}>
                 {selectedPokemon.attacks.map((attack) => (
-                  <div key={attack.id} onClick={() => handleAttackSelect(attack)} style={{ cursor: 'pointer' }}>
-                    <p>{attack.name}</p>
+                  <div className='centerdiv' key={attack.id} onClick={() => handleAttackSelect(attack)} style={{ cursor: 'pointer' }}>
+                    <p className='btn6' >{attack.name}</p>
                   </div>
                 ))}
               </div>
               {selectedAttack && (
                 <div>
-                  <p>Has seleccionado el ataque: {selectedAttack.name}</p>
-                  <button onClick={handleConfirmAttack}>Confirmar Ataque</button>
+                  <p className='battletext'>Has seleccionado el ataque: {selectedAttack.name}</p>
+                  <button className='btn7' onClick={handleConfirmAttack}>Confirmar Ataque</button>
                 </div>
               )}
             </div>
@@ -273,22 +283,22 @@ const Starbattle = () => {
 
           {confirmedAttack && selectedAttack && !confirmedPower && (
             <div>
-              <h3>Selecciona el tiempo a apostar:</h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '10px' }}>
+              <h3 className='battletext'>Selecciona el tiempo a apostar:</h3>
+              <div  className='battletext' style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', fontSize: '20' }}>
                 <div onClick={() => handleTimeSelect(10)} style={{ cursor: 'pointer' }}>
-                  <p>10</p>
+                  <p className='btn6'>10</p>
                 </div>
                 <div onClick={() => handleTimeSelect(100)} style={{ cursor: 'pointer' }}>
-                  <p>100</p>
+                  <p className='btn6'>100</p>
                 </div>
                 <div onClick={() => handleTimeSelect(1000)} style={{ cursor: 'pointer' }}>
-                  <p>1000</p>
+                  <p className='btn6'>1000</p>
                 </div>
               </div>
               {time && (
                 <div>
                   <p>Has seleccionado la cantidad de tiempo: {time}</p>
-                  <button onClick={handleConfirmTime}>Confirmar Tiempo</button>
+                  <button className='btn7' onClick={handleConfirmTime}>Confirmar Tiempo</button>
                 </div>
               )}
             </div>
@@ -303,7 +313,7 @@ const Starbattle = () => {
           <p>Tipo: {selectedPokemon.type}</p>
           <p>Ataque seleccionado: {selectedAttack.name}</p>
           <p>Tiempo apostado: {time}</p>
-          <button onClick={handleBattleSubmit} disabled={botonPresionado2}>COMBATIR</button></div>
+          <button className='btn7' onClick={handleBattleSubmit}  disabled={botonPresionado2}>COMBATIR</button></div>
 
       )}
 
@@ -324,7 +334,7 @@ const Starbattle = () => {
             Fin del combate
           </Link>
         </div>
-
+//aqui
       )}
 
 

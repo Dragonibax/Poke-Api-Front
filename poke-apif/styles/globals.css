@@ -1,3 +1,7 @@
+*{
+  margin: 0%;
+}
+
 body {
  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,6 +36,7 @@ nav {
   margin: 1px auto 1px;
   display: flex;
   top: 0;
+  position: relative;
   width:100%;
   align-items: center;
   color: white;
@@ -196,5 +201,45 @@ tbody tr:hover{
 
 .victory1{
   margin-left: 79%;
+}
+
+/*css para las batallas*/
+.battletitles{
+  margin: 25px;
+  padding: auto;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.battletext{
+  font-size: 20px;
+  font-style: oblique;
+  text-align: center;
+  border-color: black;
+}
+
+.battle-content{
+  align-items: center;
+  display: block;
+ text-align: center;
+}
+
+.pokeselection{
+  color: black;
+  
+  font-size: 25px;
+}
+
+.centerdiv{
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.spritepokemon{
+  transform: transform .5s;
+}
+.spritepokemon:hover{
+  transform: scale(1.5);
 }
 
