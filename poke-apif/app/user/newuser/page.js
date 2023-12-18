@@ -52,54 +52,58 @@ const newuser = () => {
 
   return (
     // Contenedor principal con estilos del módulo CSS
-    <div className={`${commonStyles.backgroundContainer} ${commonStyles.pageContainer}`}>
-      <div className={commonStyles.container}>
-        <h2 className={commonStyles.customHeader}>Registro</h2>
+    <div className={`${commonStyles.backgroundContainer2} ${commonStyles.pageContainer2}`}>
+      <div className={commonStyles.container2}>
+        <h2 className={commonStyles.customHeader2}>Crear cuenta</h2>
         {/* Formulario con estilos del módulo CSS */}
         <form>
           {/* Cajas de entrada para el registro con estilos del módulo CSS */}
-          <div className={commonStyles.inputField}>
+          <div>
             <input
               type="text"
-              placeholder="username"
+              placeholder="Username"
               value={username}
-              onChange={(e) => setusername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
-          <div className={commonStyles.inputField}>
+          <div >
             <input
               type="text"
-              placeholder="name"
+              placeholder="Name"
               value={name}
               onChange={(e) => setname(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
-          <div className={commonStyles.inputField}>
+          <div >
             <input
               type="text"
-              placeholder="Correo Electrónico"
+              placeholder="E-mail"
               value={email}
               onChange={(e) => setemail(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
-          <div className={commonStyles.inputField}>
+          <div>
             <input
               type="password"
               placeholder="Contraseña"
               value={password}
               onChange={(e) => setpassword(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
           {/* Caja de entrada para el botón de registro con estilos del módulo CSS */}
           <button
             type="button"
-            className={`${commonStyles.customButton} ${commonStyles.register}`}
+            className={`${commonStyles.customButton2} ${commonStyles.register2}`}
             onClick={handleRegistro}
           >
             Registrarse
           </button>
           {/* Mensaje de "¿Ya tienes una cuenta?" con estilos del módulo CSS */}
-          <p className={commonStyles.forget}>
+          <p className={commonStyles.forget2}>
             ¿Ya tienes una cuenta?{' '}
             {/* Utiliza Link para redirigir al usuario a la página de login */}
             <Link href="/user/login">Iniciar Sesión</Link>

@@ -26,7 +26,19 @@
   align-items: center;
   color: #fff; 
 }
-
+.backgroundContainer2 {
+  /* Establece la imagen de fondo y otros estilos según sea necesario */
+  background-image: url('https://images.unsplash.com/photo-1542779283-429940ce8336?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; 
+}
 /* Estilos para el contenedor principal */
 .pageContainer {
   display: flex;
@@ -35,6 +47,12 @@
   min-height: 97vh;
 }
 .pageContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.pageContainer2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,9 +68,9 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(244, 244, 244, 0.8);
+  background-color: rgba(145, 78, 165, 0.8);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(89, 3, 97);
 }
 .container1 {
   display: flex;
@@ -66,8 +84,31 @@
  border-radius: 8px;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
+.container2 {
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ transition:  all .5s ease-out;
+ max-width: 400px;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: #042f1457;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
 
 .customHeader {
+  text-align: center;
+  color: rgb(89, 3, 97);
+  margin-bottom: 20px;
+}
+.customHeader1 {
+  text-align: center;
+  color: #f7f4f4;
+  margin-bottom: 20px;
+}
+.customHeader2 {
   text-align: center;
   color: #f7f4f4;
   margin-bottom: 20px;
@@ -78,8 +119,10 @@
   margin-bottom: 15px;
   padding: 8px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(38, 0, 41);
+  background-color: rgb(48, 1, 92);
   border-radius: 4px;
+  cursor: pointer;
 }
 .inputField1 {
   width: 100%;
@@ -91,11 +134,35 @@
   border-radius: 4px;
   cursor: pointer;
 }
+.inputField2 {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid rgb(41, 18, 0);
+  background-color: rgb(53, 23, 0);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.inputField:hover{
+  background-color: rgba(11, 1, 37, 0.68);
+}
+.inputField::first-line{
+  color: #ffffff;
+}
+
 .inputField1:hover{
   background-color: rgba(11, 1, 37, 0.68);
 }
 .inputField1::first-line{
   color: #f4f4f5;
+}
+
+.inputField2:hover{
+  background-color: rgba(37, 18, 1, 0.68);
+}
+.inputField2::first-line{
+  color: #5c5c5c;
 }
 
 /* Estilos para el botón común */
@@ -164,9 +231,20 @@
 .registerButton:hover {
   background-color: #2980b9;
 }
-
 .recoveryButton:hover {
   background-color: #2980b9;
+}
+.customButton{
+  width: 60%;
+    border: solid thin rgb(73, 5, 87);
+    padding: .7rem;
+    border-radius: 3ch;
+    background-color: rgb(89, 3, 97);
+    margin-top: 0rem;
+    margin-left: 20%;
+    font-size: .8rem;
+    cursor: pointer;
+    color: #ffffff;
 }
 .customButton1{
   width: 60%;
@@ -179,12 +257,29 @@
     cursor: pointer;
     color: #ffffff;
 }
+.customButton2{
+  width: 60%;
+    border: solid thin rgb(70, 28, 0);
+    padding: .7rem;
+    border-radius: 3ch;
+    background-color: rgba(53, 23, 0, 0);
+    margin-top: 0%;
+    margin-left: 20%;
+    font-weight: 100;
+    font-size: .9rem;
+    cursor: pointer;
+    color: #ffffff;
+}
 
 .customButton:hover {
-  background-color: #240691b7;
+  background-color: #bc5cc5b7;
 }
 .customButton1:hover {
   background-color: #240691b7;
+
+}
+.customButton2:hover {
+  background-color: rgb(41, 18, 0);
 
 }
 
@@ -192,9 +287,30 @@
   margin-top: 5px;
   color: #f7f5f5;
 }
-
 .forget a {
   color: #4cafaa;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.forget4 {
+  margin-top: 5px;
+  color: #f7f5f5;
+}
+.forget4 a {
+  color: #bb86c0;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.forget2 {
+  margin-top: 5px;
+  color: #ffffff;
+}
+.forget2 a {
+  color: #572402;
   font-weight: 600;
   text-decoration: none;
   margin-left: 5px;
