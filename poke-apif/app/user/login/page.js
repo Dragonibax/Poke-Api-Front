@@ -58,7 +58,7 @@ const login = () => {
                 <>    
                 
                 <div className={commonStyles.container1}>
-                    <h2 className={commonStyles.customHeader}>Inicio de Sesion</h2>
+                    <h2 className={commonStyles.customHeader1}>Inicio de Sesion</h2>
                     {/* Cajas de entrada para el nombre de usuario y la contraseña */}
                     <input
                       type="text"
@@ -67,6 +67,7 @@ const login = () => {
                       onChange={(e) => setUsername(e.target.value)}
                       className={commonStyles.inputField1}
                     />
+
                     <input
                       type="password"
                       placeholder="Contraseña"

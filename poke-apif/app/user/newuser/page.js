@@ -53,8 +53,11 @@ const newuser = () => {
   return (
     // Contenedor principal con estilos del módulo CSS
     <div className={`${commonStyles.backgroundContainer2} ${commonStyles.pageContainer2}`}>
+
       <div className={commonStyles.container2}>
+
         <h2 className={commonStyles.customHeader2}>Crear cuenta</h2>
+        
         {/* Formulario con estilos del módulo CSS */}
         <form>
           {/* Cajas de entrada para el registro con estilos del módulo CSS */}
