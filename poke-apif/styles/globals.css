@@ -40,8 +40,13 @@ nav {
   width:100%;
   align-items: center;
   color: white;
+<<<<<<< HEAD
   font-size: 20px;
   background-color: rgb(53, 50, 50);
+=======
+  font-size: 25px;
+  background-color: rgba(17, 105, 177, 0.514);
+>>>>>>> origin/feature-design
 
 }
 nav h1 {

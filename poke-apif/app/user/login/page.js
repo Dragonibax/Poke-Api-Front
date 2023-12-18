@@ -48,7 +48,7 @@ const login = () => {
     //const [password, setPassword] = useState('');
     return (
         <>
-        <div className={`${commonStyles.backgroundContainer} ${commonStyles.pageContainer}`}>
+        <div className={`${commonStyles.backgroundContainer1} ${commonStyles.pageContainer1}`}>
             {!user.logged?
             <h1></h1>:
             <h1>Bienvenido {user.user}</h1>}           
@@ -57,7 +57,7 @@ const login = () => {
                 :
                 <>    
                 
-                <div className={commonStyles.container}>
+                <div className={commonStyles.container1}>
                     <h2 className={commonStyles.customHeader}>Inicio de Sesion</h2>
                     {/* Cajas de entrada para el nombre de usuario y la contraseña */}
                     <input
@@ -65,17 +65,17 @@ const login = () => {
                       placeholder="Usuario"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      className={commonStyles.inputField}
+                      className={commonStyles.inputField1}
                     />
                     <input
                       type="password"
                       placeholder="Contraseña"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className={commonStyles.inputField}
+                      className={commonStyles.inputField1}
                     />
                     {/* Botón para realizar el inicio de sesión */}
-                    <button className={commonStyles.customButton} onClick={handleLogin}>
+                    <button className={commonStyles.customButton1} onClick={handleLogin}>
                         Iniciar Sesion
                     </button>
             

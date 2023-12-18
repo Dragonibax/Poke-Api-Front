@@ -13,6 +13,19 @@
   align-items: center;
   color: #fff; 
 }
+.backgroundContainer1 {
+  /* Establece la imagen de fondo y otros estilos según sea necesario */
+  background-image: url('https://i.blogs.es/87721e/e60ndt2ucay2qi1/1366_2000.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; 
+}
 
 /* Estilos para el contenedor principal */
 .pageContainer {
@@ -20,6 +33,12 @@
   justify-content: center;
   align-items: center;
   min-height: 97vh;
+}
+.pageContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Estilos para el contenedor del formulario */
@@ -35,10 +54,22 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.container1 {
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ max-width: 400px;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: rgba(11, 1, 37, 0.68);
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
 
 .customHeader {
   text-align: center;
-  color: #333;
+  color: #f7f4f4;
   margin-bottom: 20px;
 }
 
@@ -49,6 +80,22 @@
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.inputField1 {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #0608927c;
+  background-color: #5d5eb3b2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.inputField1:hover{
+  background-color: rgba(11, 1, 37, 0.68);
+}
+.inputField1::first-line{
+  color: #f4f4f5;
 }
 
 /* Estilos para el botón común */
@@ -121,18 +168,33 @@
 .recoveryButton:hover {
   background-color: #2980b9;
 }
+.customButton1{
+  width: 60%;
+    border: solid thin rgb(255, 255, 255);
+    padding: .7rem;
+    border-radius: 3ch;
+    background-color: rgb(19, 2, 64);
+    margin-top: 1rem;
+    font-size: .8rem;
+    cursor: pointer;
+    color: #ffffff;
+}
 
 .customButton:hover {
-  background-color: #2980b9;
+  background-color: #240691b7;
+}
+.customButton1:hover {
+  background-color: #240691b7;
+
 }
 
 .forget {
   margin-top: 5px;
-  color: #333;
+  color: #f7f5f5;
 }
 
 .forget a {
-  color: #4caf50;
+  color: #4cafaa;
   font-weight: 600;
   text-decoration: none;
   margin-left: 5px;
