@@ -52,6 +52,17 @@
   align-items: center;
   color: #fff; 
 }
+.backgroundContainercombat {
+  /* Establece la imagen de fondo y otros estilos según sea necesario */
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-image: url('https://i.pinimg.com/564x/a5/48/4c/a5484c0695a58f3d20a1a09975dd4019.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
 /* Estilos para el contenedor principal */
 .pageContainer {
   display: flex;
@@ -412,3 +423,9 @@
   text-decoration: none;
   margin-left: 5px;
 }
+
+
+
+
+
+
