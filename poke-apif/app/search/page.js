@@ -57,7 +57,7 @@ export default function search ( ) {
             </tr>
          </thead>
          <tbody id="data">
-
+            
          </tbody>
         </table>
 
