@@ -10,27 +10,6 @@ export default function battle ( ) {
       <Link className="btn10" href={"/battle/starbattle"}>
                     Iniciar Batalla
       </Link>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       
      
   </div>

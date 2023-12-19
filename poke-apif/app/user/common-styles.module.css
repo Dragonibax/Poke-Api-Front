@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  min-height: auto;
+  min-height: 96vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +58,7 @@
   margin-bottom: 0%;
   background-image: url('https://i.pinimg.com/564x/a5/48/4c/a5484c0695a58f3d20a1a09975dd4019.jpg');
   background-position: center;
+  min-height: 96vh;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -108,6 +109,7 @@
  align-items: center;
  justify-content: center;
  max-width: 400px;
+ min-height: 96vh;
  margin: 0 auto;
  padding: 20px;
  background-color: rgba(11, 1, 37, 0.68);
