@@ -9,9 +9,7 @@ const datos = [
   // Agrega más filas según sea necesario
 ];
 
-
-
-const url ='http://localhost:8080/api/user/findall';
+const url ='http://localhost:8080/api/historial/findall';
 
 
 export default function search ( ) {
@@ -19,7 +17,7 @@ export default function search ( ) {
 
     const [data, setData] = useState([]);
 
-    let url ='http://localhost:8080/api/user/findall'; //poner aqui url de la api a usar
+    let url ='http://localhost:8080/api/historial/findall'; //poner aqui url de la api a usar
  fetch(url)
      .then(response=> response.json())
      .then(data=> mostrarData(data))
@@ -29,7 +27,7 @@ export default function search ( ) {
      console.log(data)
      let body = ''
      for (let i = 0; i<data.length; i++){
-         body += `<tr><td>${data[i].idUser}</td><td>${data[i].name}</td><td>${data[i].timeBet}</td><td>${data[i].winner}</td><td>${data[i].battles}</td><td>${data[i].victories}</td><td>${data[i].defeats}</td></tr>`
+         body += `<tr><td>${data[i].idUser}</td><td>${data[i].nameUser}</td><td>${data[i].timeBetUser}</td><td>${data[i].isWinnerUser}</td><td>${data[i].idUserPokemon}</td><td>${data[i].namePokemon}</td><td>${data[i].tipePokemon}</td><td>${data[i].movesPokemon}</td><td>${data[i].hpPokemon}</td><td>${data[i].winnerPokemon}</td><td>${data[i].idOponent}</td><td>${data[i].isOponentUser}</td><td>${data[i].tipeOponent}</td><td>${data[i].hpOponent}</td><td>${data[i].winnerOponent}</td></tr>`
      }
     
 
@@ -43,23 +41,33 @@ export default function search ( ) {
         <p>Buscar Datos</p>  
 
         <h2>Tabla de estadisticas de las Batallas Pokemon</h2>
-        
+
+    <div> 
         <table>
          <thead>
             <tr>
                 <th>ID</th>
-                <th>NOMBRE</th>
+                <th>USUARIO</th>
                 <th>APUESTA DE TIEMPO</th>
                 <th>GANADOR</th>
-                <th>BATALLAS</th>
-                <th>VICTORIAS</th>
-                <th>DERROTAS</th>
+                <th>IDPOKEMON</th>
+                <th>POKEMON</th>
+                <th>TIPO</th>
+                <th>MOVIMIENTOS</th>
+                <th>HP</th>
+                <th>GANADOR</th>
+                <th>IDOPONENTE</th>
+                <th>OPONENTE</th>
+                <th>TIPO</th>
+                <th>HP</th>
+                <th>GANADOR</th>
             </tr>
          </thead>
          <tbody id="data">
             
          </tbody>
         </table>
+        </div>   
 
 {/* <script>
  let url ='http://localhost:8081/autores';
