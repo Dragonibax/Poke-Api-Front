@@ -11,7 +11,7 @@ const datos = [
 
 
 
-const url ='http://localhost:8081/autores';
+const url ='http://localhost:8080/api/user/findall';
 
 
 export default function search ( ) {
@@ -19,7 +19,7 @@ export default function search ( ) {
 
     const [data, setData] = useState([]);
 
-    let url ='http://localhost:8081/autores'; //poner aqui url de la api a usar
+    let url ='http://localhost:8080/api/user/findall'; //poner aqui url de la api a usar
  fetch(url)
      .then(response=> response.json())
      .then(data=> mostrarData(data))
@@ -29,7 +29,7 @@ export default function search ( ) {
      console.log(data)
      let body = ''
      for (let i = 0; i<data.length; i++){
-         body += `<tr><td>${data[i].id}</td><td>${data[i].nombre}</td><td>${data[i].dato2}</td><td>${data[i].dato3}</td><td>${data[i].dato4}</td><td>${data[i].dato5}</td><td>${data[i].dato6}</td></tr>`
+         body += `<tr><td>${data[i].idUser}</td><td>${data[i].name}</td><td>${data[i].timeBet}</td><td>${data[i].winner}</td><td>${data[i].battles}</td><td>${data[i].victories}</td><td>${data[i].defeats}</td></tr>`
      }
     
 
@@ -48,12 +48,12 @@ export default function search ( ) {
          <thead>
             <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>DATO1</th>
-                <th>DATO2</th>
-                <th>DATO3</th>
-                <th>DATO4</th>
-                <th>DATO5</th>
+                <th>NOMBRE</th>
+                <th>APUESTA DE TIEMPO</th>
+                <th>GANADOR</th>
+                <th>BATALLAS</th>
+                <th>VICTORIAS</th>
+                <th>DERROTAS</th>
             </tr>
          </thead>
          <tbody id="data">
