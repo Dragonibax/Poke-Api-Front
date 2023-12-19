@@ -66,7 +66,7 @@ const newuser = () => {
               type="text"
               placeholder="Usuario"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setusername(e.target.value)}
               className={commonStyles.inputField2}
             />
           </div>
