@@ -235,7 +235,7 @@ const Starbattle = () => {
     <div className='battle-content'>
       {showFourthPokemon && (
         <div>
-          <h3 className='battletitles'>Un pokemon Salvaje a aparcido:</h3>
+          <h3 className='battletitles'>Un pokemon Salvaje ha aparcido:</h3>
           {fourthPokemonInfo && (
             <div>
               <div>ID: {fourthPokemonInfo.id}, Nombre: {fourthPokemonInfo.name}, 
