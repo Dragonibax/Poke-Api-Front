@@ -22,6 +22,9 @@ const Starbattle = () => {
   const [botonPresionado2, setBotonPresionado2] = useState(false);
   const [selectedAttack, setSelectedAttack] = useState(null);
 
+  let urlpokeinfo='http://localhost:3000/api/figth/pokemons';
+  let urlpokebattle='http://localhost:3000/api/figth/start';
+
   /*
   const dataresum=[
     {
@@ -111,18 +114,18 @@ const Starbattle = () => {
     // Realiza la petición a la API de Pokemon
     const fetchPokemonData = async () => {
       try {
-        const response = await fetch('https://api.example.com/pokemon');
+        const response = await fetch(urlpokeinfo);
         const data = await response.json();
         setPokemonData(data);
-
+        console.log(data);
         // Muestra la información del cuarto Pokémon
         setFourthPokemonInfo(data[3]);
       } catch (error) {
         console.error('Error fetching Pokemon data:', error);
         //Quitar las proximas 3 lineas
-        const data = sabpokedata;
+        /*const data = sabpokedata;
         setPokemonData(data);
-        setFourthPokemonInfo(data[3]);
+        setFourthPokemonInfo(data[3]);*/
       }
     };
 
@@ -181,11 +184,11 @@ const Starbattle = () => {
         nombreUsuario: user.user,
         idPokemon: selectedPokemon.id,
         idPokeIA: fourthPokemonInfo.id,
-        idMove: selectedAttack.id,
+        Move: selectedAttack.Move,
         bet: time,
       };
 
-      const response = await fetch('https://api.example.com/battle', {
+      const response = await fetch(urlpokebattle, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -197,19 +200,19 @@ const Starbattle = () => {
       setBattleResult(data);
        // Limpiar la información y mostrar solo el resultado
       setBattleResult(null);
-      setBattleResultMessage(null);
       setShowResult(true);
 
     } catch (error) {
       console.error('Error submitting battle:', error);
 
       // Simulando respuesta de datos locales en caso de error
+      /*
       const dataresult = {
         "isWiner": true,
         "nombrePokemon": selectedPokemon.name,
         "ataquePokemon": selectedAttack.name,
-        "nombrePokeIA": "fourthPokemonInfo,name",
-        "ataquePokeIA": "fourthPokemonInfo.AtaquePokeIA",
+        "nombrePokeIA": fourthPokemonInfo,name,
+        "ataquePokeIA": fourthPokemonInfo.AtaquePokeIA,
         "tiempo": "75"
       };
       
@@ -217,7 +220,7 @@ const Starbattle = () => {
 
       setBattleResult(dataresult);
 
-
+*/
 
     }
     setBotonPresionado2(true);
