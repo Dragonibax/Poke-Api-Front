@@ -20,7 +20,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  min-height: 100vh;
+  min-height: 96vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 96vh;
 }
 .pageContainer2 {
   display: flex;
