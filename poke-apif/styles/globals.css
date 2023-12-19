@@ -87,18 +87,25 @@ nav li.btn:hover {
 table{
   color: #fff;
   font-size: 34px;
+  max-width: 90vh;
+  min-width: 90vh;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
 thead{
-  background: rgba(212, 1, 1, 0.4);
+  background: rgba(232, 235, 42, 0.4);
+  max-width: 100vh;
+  min-width: 90vh;
 }
 
 th{
   padding: 20px 15px;
   font-weight: 700;
   text-transform: uppercase;
+  max-width: 6vh;
+  min-width: 9vh;
+  
 }
 
 td{
@@ -257,4 +264,19 @@ tbody tr:hover{
   height: 10px;
   background-color: #00f310; /* Color de la barra de progreso */
   transition: width 1s ease-in-out; /* Duración y transición */
+}
+
+.tablehistori{
+  color: black;
+  font-size: 15px;
+  max-width: 100vh;
+  margin: 25px;
+}
+
+.historialTitle{
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
