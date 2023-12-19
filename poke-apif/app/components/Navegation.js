@@ -6,12 +6,6 @@ const linksNoUser =[{
   label : 'Inicio',
   route : '/'
 },{
-  label : 'Busqueda',
-  route : '/search'
-},{
-  label : 'Combates',
-  route : '/battle'
-},{
   label : 'Cuenta',
   route : '/user'
 }]

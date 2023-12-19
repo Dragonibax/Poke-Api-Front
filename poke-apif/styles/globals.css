@@ -251,3 +251,10 @@ tbody tr:hover{
   transform: scale(1.5);
 }
 
+
+.progressBar {
+  margin: 10px;
+  height: 10px;
+  background-color: #00f310; /* Color de la barra de progreso */
+  transition: width 1s ease-in-out; /* Duración y transición */
+}
