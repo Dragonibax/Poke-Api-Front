@@ -20,7 +20,7 @@ const login = () => {
     const handleLogin = async () => {
       try {
         // Realiza la petición a la API para iniciar sesión
-        const response = await fetch('', {
+        const response = await fetch('http://localhost:8080/api/user/encoded', {
           method: 'POST',  
           headers: {
             'Content-Type': 'application/json',
@@ -48,34 +48,35 @@ const login = () => {
     //const [password, setPassword] = useState('');
     return (
         <>
-        <div className={`${commonStyles.backgroundContainer} ${commonStyles.pageContainer}`}>
+        <div className={`${commonStyles.backgroundContainer1} ${commonStyles.pageContainer1}`}>
             {!user.logged?
             <h1></h1>:
-            <h1>Bienvenido {user.nombre}</h1>}           
+            <h1>Bienvenido {user.user}</h1>}           
             {user.logged?
                 <button onClick={()=>logoutUser()}>Salir</button>
                 :
                 <>    
                 
-                <div className={commonStyles.container}>
-                    <h2 className={commonStyles.customHeader}>Inicio de Sesion</h2>
+                <div className={commonStyles.container1}>
+                    <h2 className={commonStyles.customHeader1}>Inicio de Sesion</h2>
                     {/* Cajas de entrada para el nombre de usuario y la contraseña */}
                     <input
                       type="text"
                       placeholder="Usuario"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      className={commonStyles.inputField}
+                      className={commonStyles.inputField1}
                     />
+
                     <input
                       type="password"
                       placeholder="Contraseña"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className={commonStyles.inputField}
+                      className={commonStyles.inputField1}
                     />
                     {/* Botón para realizar el inicio de sesión */}
-                    <button className={commonStyles.customButton} onClick={handleLogin}>
+                    <button className={commonStyles.customButton1} onClick={handleLogin}>
                         Iniciar Sesion
                     </button>
             
