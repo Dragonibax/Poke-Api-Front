@@ -50,16 +50,17 @@ const finduser = () => {
         {/* Formulario con estilos del módulo CSS */}
         <form>
           {/* Caja de entrada para el correo electrónico con estilos del módulo CSS */}
-          <div className={commonStyles.inputField}>
+          <div>
             <input
               type="text"
-              placeholder="Correo Electrónico"
+              placeholder="E-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className={commonStyles.inputField}
             />
           </div>
           {/* Caja de entrada para el botón de enviar con estilos del módulo CSS */}
-          <div className={commonStyles.inputField}>
+          <div >
             <input
               type="button"
               value="Enviar"
@@ -68,7 +69,7 @@ const finduser = () => {
             />
           </div>
           {/* Mensaje de "¿Ya tienes una cuenta?" con estilos del módulo CSS */}
-          <p className={commonStyles.forget}>
+          <p className={commonStyles.forget4}>
             ¿Ya tienes una cuenta?{' '}
             {/* Utiliza Link para redirigir al usuario a la página de login */}
             <Link href="/user/login">Iniciar Sesión</Link>
