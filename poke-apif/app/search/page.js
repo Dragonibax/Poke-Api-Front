@@ -9,7 +9,7 @@ const datos = [
   // Agrega más filas según sea necesario
 ];
 
-const url ='http://localhost:8080/api/historial/findall';
+//const url ='http://localhost:8080/api/historial/findall';
 
 
 export default function search ( ) {
@@ -17,7 +17,7 @@ export default function search ( ) {
 
     const [data, setData] = useState([]);
 
-    let url ='http://localhost:8080/api/historial/findall'; //poner aqui url de la api a usar
+    let url ='http://localhost:8081/api/historial/findall'; //poner aqui url de la api a usar
  fetch(url)
      .then(response=> response.json())
      .then(data=> mostrarData(data))
@@ -48,7 +48,7 @@ export default function search ( ) {
                 <th>USUARIO</th>
                 <th>APUESTA DE TIEMPO</th>
                 <th>GANADOR</th>
-                <th>IDPOKEMON</th>
+                <th>ID POKEMON</th>
                 <th>POKEMON</th>
                 <th>TIPO</th>
                 <th>MOVIMIENTOS</th>

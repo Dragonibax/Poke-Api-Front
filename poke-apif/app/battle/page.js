@@ -1,15 +1,21 @@
 import Link from "next/link";
 
 import commonStyles from '../user/common-styles.module.css';
+/* <div className={`${commonStyles.backgroundContainercombat} ${commonStyles.pageContainercombat}`}>*/
 export default function battle ( ) {
   return (
     <>
+   
       <div className="battle-content">
         <h1 className="battletitles">Sección de combates</h1>
         <div className=".battletext">
         <p>
-          Bienvenidos a nuestra Poke-Api
+          Bienvenidos a la zona de combates Pokemon
         </p>
+        
+        <h1 className={`${commonStyles.battletitles}`}>Sección de combates</h1>
+        <p className={`${commonStyles.battletitles2}`}>En la sección de combates de un juego de Pokémon, el jugador tiene la oportunidad de enfrentarse a otros Pokémon en emocionantes duelos. Al inicio del combate, se presenta una pantalla donde puedes elegir de tu equipo el Pokémon con el que deseas luchar. Cada Pokémon tiene sus propias habilidades y estadísticas, incluyendo tipos de movimientos como ataque, defensa, y habilidades especiales.</p>
+        
         <br></br> 
         <p>Estos son los pasos a seguir dentro de los combates:</p>
         <br></br>
@@ -23,7 +29,7 @@ export default function battle ( ) {
         </ol>
         <br></br>
         <p>Una vez finalizado el combate, tendrás el resultado de la batalla.</p>
-
+  
         <Link className="btn10" href={"/battle/starbattle"}>
           Iniciar Batalla
         </Link>
