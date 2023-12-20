@@ -64,16 +64,16 @@ const newuser = () => {
           <div>
             <input
               type="text"
-              placeholder="Username"
+              placeholder="Usuario"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setusername(e.target.value)}
               className={commonStyles.inputField2}
             />
           </div>
           <div >
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Nombre"
               value={name}
               onChange={(e) => setname(e.target.value)}
               className={commonStyles.inputField2}
