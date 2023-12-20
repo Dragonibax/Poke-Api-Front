@@ -2,6 +2,7 @@
 import React, { useState, useEffect, use } from 'react';
 import Link from "next/link";
 import { useUserContext } from '../../components/Context/UserContextProvider';
+import { type } from 'os';
 
 const Starbattle = () => {
 
@@ -180,27 +181,29 @@ const Starbattle = () => {
   const handleBattleSubmit = async () => {
     try {
       const userData = {
-        /*idUsuario: user.iduser,*/
         nombreUsuario: user.user,
-        idPokemon: selectedPokemon.id,
-        idPokeIA: fourthPokemonInfo.id,
-        Move: selectedAttack.Move,
-        bet: time,
+        idPokemonUser: ""+selectedPokemon.id,
+        moveUser: selectedAttack.name,
+        idPokemonIA: ""+fourthPokemonInfo.id,
+        moveIA: fourthPokemonInfo.moves[0].name,
+        bet: ""+time,
       };
 
+      let payload=[userData];
+      
       const response = await fetch(urlpokebattle, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(payload)
       });
 
       const data = await response.json();
       setBattleResult(data);
        // Limpiar la información y mostrar solo el resultado
-      setBattleResult(null);
-      setShowResult(true);
+      //setBattleResult(null);
+      //setShowResult(true);
 
     } catch (error) {
       console.error('Error submitting battle:', error);
@@ -232,12 +235,18 @@ const Starbattle = () => {
     <div className='battle-content'>
       {showFourthPokemon && (
         <div>
-          <h3 className='battletitles'>Un pokemon Salvaje a aparcido:</h3>
+          <h3 className='battletitles'>Un pokemon Salvaje ha aparcido:</h3>
           {fourthPokemonInfo && (
             <div>
-              <p>ID: {fourthPokemonInfo.id}, Nombre: {fourthPokemonInfo.name}, Tipo: {fourthPokemonInfo.type}</p>
+              <div>ID: {fourthPokemonInfo.id}, Nombre: {fourthPokemonInfo.name}, 
+              Tipos: {<div>
+                {fourthPokemonInfo.type.map((tipo)=>(
+                  <p>{tipo}</p>
+                ))}
+                </div>
+              }</div>
              
-              <img src={fourthPokemonInfo.sprite} alt={fourthPokemonInfo.name} />
+              <img src={fourthPokemonInfo.imageAPI} alt={fourthPokemonInfo.name} />
             </div>
           )}
 
@@ -253,7 +262,12 @@ const Starbattle = () => {
             {pokemonData.slice(0, 3).map((pokemon) => (
               <div className='centerdiv' key={pokemon.id} onClick={() => handlePokemonSelect(pokemon)} style={{ cursor: 'pointer' }}>
                 <p>{pokemon.name}</p>
-                <img className='spritepokemon' src={pokemon.sprite} alt={pokemon.name} style={{ maxWidth: '100px' }} />
+                <div>
+                {pokemon.type.map((tipo)=>(
+                  <p>{tipo}</p>
+                ))}
+                </div>
+                <img className='spritepokemon' src={pokemon.imageAPI} alt={pokemon.name} style={{ maxWidth: '100px' }} />
               </div>
             ))}
           </div>
@@ -269,9 +283,9 @@ const Starbattle = () => {
             <div>
               <h3 >Selecciona un ataque para {selectedPokemon.name}:</h3>
               <div className='battletext' style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '10px' }}>
-                {selectedPokemon.attacks.map((attack) => (
-                  <div className='centerdiv' key={attack.id} onClick={() => handleAttackSelect(attack)} style={{ cursor: 'pointer' }}>
-                    <p className='btn6' >{attack.name}</p>
+                {selectedPokemon.moves.map((moves) => (
+                  <div className='centerdiv' key={moves.id} onClick={() => handleAttackSelect(moves)} style={{ cursor: 'pointer' }}>
+                    <p className='btn6' >{moves.name}</p>
                   </div>
                 ))}
               </div>
@@ -326,12 +340,11 @@ const Starbattle = () => {
         <div>
           <h3>Resultado de la Batalla:</h3>
           <br></br>
-          <p>Resultado del combate {battleResult.isWiner ? 'Victoria' : 'Derrota'}</p>
-          <p>Nombre del Pokémon: {battleResult.nombrePokemon}</p>
-          <p>Ataque Pokémon: {battleResult.ataquePokemon}</p>
-          <p>Nombre del Pokémon Enemigo: {battleResult.nombrePokeIA}</p>
-          <p>Ataque del Pokémon enemigo: {battleResult.ataquePokeIA}</p>
-          <p>Tiempo: {battleResult.tiempo}</p>
+          <p>Resultado del combate {battleResult.isUserWinner ? 'Victoria' : 'Derrota'}</p>
+          <p>Nombre del Pokémon: {selectedPokemon.name}</p>
+          <p>Nombre del Pokémon Enemigo: {fourthPokemonInfo.name}</p>
+          <p>Numero de turnos: {battleResult.numberTurns}</p>
+          <p>Tiempo: {battleResult.bet}</p>
 
           <Link className="linkbotton" href={"/battle"}>
             Fin del combate

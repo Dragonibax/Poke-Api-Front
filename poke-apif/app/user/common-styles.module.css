@@ -28,7 +28,7 @@
 }
 .backgroundContainer2 {
   /* Establece la imagen de fondo y otros estilos según sea necesario */
-  background-image: url('https://images.unsplash.com/photo-1542779283-429940ce8336?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://tierragamer.com/wp-content/uploads/2017/04/cpokemon.com_yo-te-elijo-1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,7 +109,6 @@
  align-items: center;
  justify-content: center;
  max-width: 400px;
- min-height: 96vh;
  margin: 0 auto;
  padding: 20px;
  background-color: rgba(11, 1, 37, 0.68);
