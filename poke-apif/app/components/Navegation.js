@@ -1,20 +1,10 @@
 'use client'
 import Link from "next/link";
-//import styles from './navegation.module.css'
-
-import { root } from "postcss";
-import {useContext} from "react";
 import {useUserContext} from "../components/Context/UserContextProvider";
 
 const linksNoUser =[{
   label : 'Inicio',
   route : '/'
-},{
-  label : 'Busqueda',
-  route : '/search'
-},{
-  label : 'Combates',
-  route : '/battle'
 },{
   label : 'Cuenta',
   route : '/user'

@@ -11,31 +11,31 @@ import commonStyles from '../common-styles.module.css';
 // Define el componente de registro
 const newuser = () => {
   // Estados para almacenar los datos del formulario
-  const [nombre, setNombre] = useState('');
-  const [apellido, setApellido] = useState('');
-  const [correoElectronico, setCorreoElectronico] = useState('');
-  const [contrasena, setContrasena] = useState('');
+  const [username, setusername] = useState('');
+  const [name, setname] = useState('');
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
 
   // Función para manejar el registro
   const handleRegistro = async () => {
     try {
       // Verifica que todos los campos estén completos
-      if (!nombre || !apellido || !correoElectronico || !contrasena) {
+      if (!username || !name || !email || !password) {
         console.error('Por favor, complete todos los campos');
         return;
       }
 
       // Envía la solicitud de registro usando fetch
-      const response = await fetch('', {
+      const response = await fetch('http://localhost:8080/api/user/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          nombre,
-          apellido,
-          correoElectronico,
-          contrasena,
+          username,
+          name,
+          email,
+          password,
         }),
       });
 
@@ -52,54 +52,61 @@ const newuser = () => {
 
   return (
     // Contenedor principal con estilos del módulo CSS
-    <div className={`${commonStyles.backgroundContainer} ${commonStyles.pageContainer}`}>
-      <div className={commonStyles.container}>
-        <h2 className={commonStyles.customHeader}>Registro</h2>
+    <div className={`${commonStyles.backgroundContainer2} ${commonStyles.pageContainer2}`}>
+
+      <div className={commonStyles.container2}>
+
+        <h2 className={commonStyles.customHeader2}>Crear cuenta</h2>
+        
         {/* Formulario con estilos del módulo CSS */}
         <form>
           {/* Cajas de entrada para el registro con estilos del módulo CSS */}
-          <div className={commonStyles.inputField}>
+          <div>
+            <input
+              type="text"
+              placeholder="Usuario"
+              value={username}
+              onChange={(e) => setusername(e.target.value)}
+              className={commonStyles.inputField2}
+            />
+          </div>
+          <div >
             <input
               type="text"
               placeholder="Nombre"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
+              value={name}
+              onChange={(e) => setname(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
-          <div className={commonStyles.inputField}>
+          <div >
             <input
               type="text"
-              placeholder="Apellido"
-              value={apellido}
-              onChange={(e) => setApellido(e.target.value)}
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
-          <div className={commonStyles.inputField}>
-            <input
-              type="text"
-              placeholder="Correo Electrónico"
-              value={correoElectronico}
-              onChange={(e) => setCorreoElectronico(e.target.value)}
-            />
-          </div>
-          <div className={commonStyles.inputField}>
+          <div>
             <input
               type="password"
               placeholder="Contraseña"
-              value={contrasena}
-              onChange={(e) => setContrasena(e.target.value)}
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              className={commonStyles.inputField2}
             />
           </div>
           {/* Caja de entrada para el botón de registro con estilos del módulo CSS */}
           <button
             type="button"
-            className={`${commonStyles.customButton} ${commonStyles.register}`}
+            className={`${commonStyles.customButton2} ${commonStyles.register2}`}
             onClick={handleRegistro}
           >
             Registrarse
           </button>
           {/* Mensaje de "¿Ya tienes una cuenta?" con estilos del módulo CSS */}
-          <p className={commonStyles.forget}>
+          <p className={commonStyles.forget2}>
             ¿Ya tienes una cuenta?{' '}
             {/* Utiliza Link para redirigir al usuario a la página de login */}
             <Link href="/user/login">Iniciar Sesión</Link>

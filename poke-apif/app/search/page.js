@@ -37,13 +37,11 @@ export default function search ( ) {
     
     return (
     <div>
-        <h1>Seccion de estadisticas</h1>
-        <p>Buscar Datos</p>  
+        <h1 className="historialTitle">Historial</h1>
 
-        <h2>Tabla de estadisticas de las Batallas Pokemon</h2>
 
     <div> 
-        <table>
+        <table className="tablehistori">
          <thead>
             <tr>
                 <th>ID</th>
