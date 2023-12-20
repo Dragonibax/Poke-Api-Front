@@ -222,7 +222,7 @@ const Starbattle = () => {
                 </div>
                 }</div>
 
-              <img src={fourthPokemonInfo.imageAPI} alt={fourthPokemonInfo.name} />
+              <img className='spritepokemonenemy' src={fourthPokemonInfo.imageAPI} alt={fourthPokemonInfo.name} />
             </div>
           )}
           <div className='pokesab' style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
@@ -316,16 +316,16 @@ const Starbattle = () => {
 
       {battleResult && (
         <div className='contime'> 
-          <h3>Resultado de la Batalla:</h3>
+          <h3 className='redtitle'>Resultado de la Batalla:</h3>
           <br></br>
-          <p>Resultado del combate {battleResult.isUserWinner ? 'Victoria' : 'Derrota'}</p>
+          <p className='titleimp'>Resultado del combate {battleResult.isUserWinner ? 'Victoria' : 'Derrota'}</p>
           <p>Nombre del Pokémon: {selectedPokemon.name}</p>
           <p>Nombre del Pokémon Enemigo: {fourthPokemonInfo.name}</p>
           <p>Numero de turnos: {battleResult.numberTurns}</p>
           <p>Tiempo: {battleResult.bet}</p>
 
           <Link className="btn10" href={"/battle"}>
-            Fin del combate
+            Finalizar combate 
           </Link>
         </div>
       )}

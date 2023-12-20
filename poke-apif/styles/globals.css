@@ -261,10 +261,15 @@ tbody tr:hover {
 }
 
 .spritepokemon {
+  transform: scale(1.5);
   transform: transform 0.5s;
 }
 
 .spritepokemon:hover {
+  transform: scale(2.5);
+}
+
+.spritepokemonenemy {
   transform: scale(1.5);
 }
 
@@ -300,4 +305,17 @@ tbody tr:hover {
  margin-top: 50px;
  color: white;
  font-size: 20px;
+}
+
+.redtitle{
+  font-size: 30px;
+  color: red;
+  font-weight: 200;
+
+}
+
+.titleimp{
+  font-size: 30px;
+  color: black;
+  font-weight: 200;
 }
