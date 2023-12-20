@@ -10,12 +10,14 @@ export default function login ( ) {
 
     return (
         <>
-            <h2>¿Seguro que desaas salir?</h2>
 
-            <Link onClick={()=>logoutUser()} className="linkbotton" href={"/"}>
+            <div className="centrardiv" >
+            <h2 className="historialTitle">¿Seguro que deseas salir?</h2>
+
+            <Link className="btn10" onClick={()=>logoutUser()} href={"/"}>
                     Salir
             </Link>
-
+            </div>
                
 
             

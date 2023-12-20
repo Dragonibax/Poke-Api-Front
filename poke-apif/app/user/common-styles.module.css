@@ -335,7 +335,7 @@
 .customButton2{
   width: 60%;
     border: solid thin rgb(70, 28, 0);
-    padding: .7rem;
+    padding: .5rem;
     border-radius: 3ch;
     background-color: rgba(53, 23, 0, 0);
     margin-top: 0%;
@@ -419,7 +419,7 @@
   color: #ffffff;
 }
 .forget2 a {
-  color: #572402;
+  color: #493002;
   font-weight: 600;
   text-decoration: none;
   margin-left: 5px;
