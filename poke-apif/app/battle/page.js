@@ -5,11 +5,9 @@ export default function Battle() {
     <>
       <div className="battle-content">
         <h1 className="battletitles">Sección de combates</h1>
-
+        <div className=".battletext">
         <p>
-          Bienvenidos a nuestra Poke-Api, el funcionamiento será el siguiente: Al registrarte obtendrás un cierto número de tiempo,
-          ese tiempo te servirá para sobrevivir y para apostar. Cada día habrá una reducción de tiempo para simular
-          los gastos diarios en Agua, Comida, etc.
+          Bienvenidos a nuestra Poke-Api
         </p>
         <br></br> 
         <p>Estos son los pasos a seguir dentro de los combates:</p>
@@ -28,6 +26,7 @@ export default function Battle() {
         <Link className="btn10" href={"/battle/starbattle"}>
           Iniciar Batalla
         </Link>
+      </div>
       </div>
     </>
   );
