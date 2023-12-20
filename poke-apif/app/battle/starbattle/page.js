@@ -291,7 +291,7 @@ const Starbattle = () => {
               </div>
               {time && (
                 <div>
-                  <p>Has seleccionado la cantidad de tiempo: {time}</p>
+                  <p className='contime'>Has seleccionado la cantidad de tiempo: {time}</p>
                   <button className='btn10' onClick={handleConfirmTime}>Confirmar Tiempo</button>
                 </div>
               )}
@@ -300,8 +300,9 @@ const Starbattle = () => {
         </div>
       )}
 
+<div className='battletext' style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', fontSize: '20' }}>
       {confirmedPower && selectedAttack && selectedPokemon && (
-        <div>
+        <div className='contime'>
           <h3>Resumen:</h3>
           <p>Pokemon: {selectedPokemon.name}</p>
           <p>Tipo: {selectedPokemon.type}</p>
@@ -314,7 +315,7 @@ const Starbattle = () => {
 
 
       {battleResult && (
-        <div>
+        <div className='contime'> 
           <h3>Resultado de la Batalla:</h3>
           <br></br>
           <p>Resultado del combate {battleResult.isUserWinner ? 'Victoria' : 'Derrota'}</p>
@@ -323,13 +324,13 @@ const Starbattle = () => {
           <p>Numero de turnos: {battleResult.numberTurns}</p>
           <p>Tiempo: {battleResult.bet}</p>
 
-          <Link className="linkbotton" href={"/battle"}>
+          <Link className="btn10" href={"/battle"}>
             Fin del combate
           </Link>
         </div>
       )}
 
-
+</div>
 
     </div>
   );

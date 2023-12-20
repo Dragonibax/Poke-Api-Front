@@ -246,6 +246,7 @@ tbody tr:hover {
   align-items: center;
   display: block;
   text-align: center;
+  margin-bottom: 0px !important ;
 }
 
 .pokeselection {
@@ -293,4 +294,10 @@ tbody tr:hover {
 .pokesab{
   margin-top: 10 px;
   margin-bottom: 55px;
+}
+
+.contime{
+ margin-top: 50px;
+ color: white;
+ font-size: 20px;
 }
