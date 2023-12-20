@@ -22,8 +22,12 @@ body {
     
     background-color: black;
     background-image: url("/poke-apif/public/pika.jpg");*/
-    background: rgb(255,202,0);
-    background: radial-gradient(circle, rgba(255,202,0,1) 0%, rgba(255,147,0,1) 100%);
+    
+    background: radial-gradient(circle, rgb(255, 202, 0, 1) 0%, rgb(255, 147, 0, 1) 100%);
+    background-image: url("https://www.mundodeportivo.com/alfabeta/hero/2022/11/pokemon-ue.jpeg?width=1200&aspect_ratio=16:9");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
     
 }
@@ -78,31 +82,33 @@ nav li.btn:hover {
 
 /*css para tabla*/ 
 
-.container{
+/*.container{
   border: solid 1px rgba(114, 14, 117, 0.678);
-  align-items: center;
-}
+}*/
 
 table{
-  color: #fff;
+  color: #000000;
   font-size: 34px;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
 thead{
-  background: rgba(212, 1, 1, 0.4);
+  background: rgba(212, 1, 1, 0.764);
 }
 
 th{
   padding: 20px 15px;
   font-weight: 700;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 td{
   padding: 15px;
-  border-bottom: solid 1px rgba(224, 12, 12, 0.61);
+  border-bottom: solid 1px rgba(79, 12, 224, 0.779);
+  font-size: 15px;
+  font-weight: 800;
 }
 
 tbody tr {
@@ -214,3 +220,12 @@ tbody tr:hover{
   margin-left: 79%;
 }
 
+.titlees{
+  text-align: center;
+  font-size: 35px;
+}
+
+.tabletitle{
+  text-align: center;
+  font-size: 50px;
+}
