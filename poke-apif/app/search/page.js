@@ -27,7 +27,7 @@ export default function search ( ) {
      console.log(data)
      let body = ''
      for (let i = 0; i<data.length; i++){
-         body += `<tr><td>${data[i].idUser}</td><td>${data[i].nameUser}</td><td>${data[i].timeBetUser}</td><td>${data[i].isWinnerUser}</td><td>${data[i].idUserPokemon}</td><td>${data[i].namePokemon}</td><td>${data[i].tipePokemon}</td><td>${data[i].movesPokemon}</td><td>${data[i].hpPokemon}</td><td>${data[i].winnerPokemon}</td><td>${data[i].idOponent}</td><td>${data[i].isOponentUser}</td><td>${data[i].tipeOponent}</td><td>${data[i].hpOponent}</td><td>${data[i].winnerOponent}</td></tr>`
+         body += `<tr><td>${data[i].idUser}</td><td>${data[i].nameUser}</td><td>${data[i].timeBet}</td><td>${data[i].isWinnerUser}</td><td>${data[i].idUserPokemon}</td><td>${data[i].nameUserPokemon}</td><td>${data[i].tipeUserPokemon}</td><td>${data[i].moveUserPokemon}</td><td>${data[i].hpUserPokemon}</td><td>${data[i].isOpntWinner}</td><td>${data[i].nameOpntPokemon}</td><td>${data[i].typeOpnt}</td><td>${data[i].moveOpntPokemon}</td><td>${data[i].hpOpntPokemon}</td><td>${data[i].numberTurns}</td></tr>`
      }
     
 
@@ -37,11 +37,13 @@ export default function search ( ) {
     
     return (
     <div>
-        <h1 className="historialTitle">Historial</h1>
+        <h1 className="titlees">Seccion de estadisticas</h1>
+        
 
+        <h2 className="tabletitle">Tabla de estadisticas de las Batallas Pokemon</h2>
 
-    <div> 
-        <table className="tablehistori">
+    <div className="container"> 
+        <table>
          <thead>
             <tr>
                 <th>ID</th>
@@ -53,12 +55,12 @@ export default function search ( ) {
                 <th>TIPO</th>
                 <th>MOVIMIENTOS</th>
                 <th>HP</th>
-                <th>GANADOR</th>
-                <th>IDOPONENTE</th>
-                <th>OPONENTE</th>
+                <th>OPONENTE GANADOR</th>
+                <th>POKEMON OPONENTE</th>
                 <th>TIPO</th>
+                <th>MOVIMIENTO</th>
                 <th>HP</th>
-                <th>GANADOR</th>
+                <th>TURNOS</th>
             </tr>
          </thead>
          <tbody id="data">
