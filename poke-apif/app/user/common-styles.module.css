@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
-  min-height: auto;
+  min-height: 96vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 .backgroundContainer2 {
   /* Establece la imagen de fondo y otros estilos según sea necesario */
-  background-image: url('https://images.unsplash.com/photo-1542779283-429940ce8336?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://tierragamer.com/wp-content/uploads/2017/04/cpokemon.com_yo-te-elijo-1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,6 +51,18 @@
   justify-content: center;
   align-items: center;
   color: #fff; 
+}
+.backgroundContainercombat {
+  /* Establece la imagen de fondo y otros estilos según sea necesario */
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-image: url('https://i.pinimg.com/564x/a5/48/4c/a5484c0695a58f3d20a1a09975dd4019.jpg');
+  background-position: center;
+  min-height: 96vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
 }
 /* Estilos para el contenedor principal */
 .pageContainer {
@@ -412,3 +424,9 @@
   text-decoration: none;
   margin-left: 5px;
 }
+
+
+
+
+
+

@@ -15,6 +15,18 @@ body {
     background-image: url("/poke-apif/public/pika.jpg");*/
   background: radial-gradient(circle, rgba(255, 202, 0, 1) 0%, rgba(255, 147, 0, 1) 100%);
   background-image: url("https://www.dexerto.es/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.es/wp-content/uploads/sites/3/2020/03/portada-liga-batalla-de-pokemon-go.jpg");
+    
+    background: url('https://pbs.twimg.com/media/D-EkX_hWkAEXeok.jpg:large') no-repeat ;
+    background-size: cover;
+    min-height: 100vh;
+   
+}
+
+.home{
+  font-size: 20px;
+  text-align: center;
+   color: rgb(255, 255, 255); 
+  text-shadow: 1px 2px 2px rgb(5, 52, 103);
 }
 
 a {
@@ -84,23 +96,30 @@ nav li.btn:hover {
 table {
   color: #fff;
   font-size: 34px;
+  max-width: 90vh;
+  min-width: 90vh;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
-thead {
-  background: rgba(212, 1, 1, 0.4);
+thead{
+  background: rgba(232, 235, 42, 0.4);
+  max-width: 100vh;
+  min-width: 90vh;
 }
 
 th {
   padding: 20px 15px;
   font-weight: 700;
   text-transform: uppercase;
+  max-width: 6vh;
+  min-width: 9vh;
+  
 }
 
 td {
   padding: 15px;
-  border-bottom: solid 1px rgba(224, 12, 12, 0.61);
+  border-bottom: solid 1px rgba(12, 90, 224, 0.61);
 }
 
 tbody tr {
@@ -246,4 +265,32 @@ tbody tr:hover {
 
 .spritepokemon:hover {
   transform: scale(1.5);
+}
+
+
+.progressBar {
+  margin: 10px;
+  height: 10px;
+  background-color: #00f310; /* Color de la barra de progreso */
+  transition: width 1s ease-in-out; /* Duración y transición */
+}
+
+.tablehistori{
+  color: black;
+  font-size: 15px;
+  max-width: 100vh;
+  margin: 25px;
+}
+
+.historialTitle{
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.pokesab{
+  margin-top: 10 px;
+  margin-bottom: 55px;
 }

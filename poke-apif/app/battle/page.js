@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function Battle() {
+import commonStyles from '../user/common-styles.module.css';
+export default function battle ( ) {
   return (
     <>
       <div className="battle-content">
@@ -30,19 +31,5 @@ export default function Battle() {
       </div>
     </>
   );
-}
-
-
-
-
-/* idea del formato json a enviar
-        {
-          "idUsuario": 2342,
-           id:35,
-           name:"clefairy",
-          "type": "grass",
-          "move": "cut",
-          "hp": 100
-      }
-
-*/
+  /*<div className={`${commonStyles.backgroundContainercombat} ${commonStyles.pageContainercombat}`}>*/
+  }
