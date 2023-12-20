@@ -17,7 +17,7 @@ export default function search ( ) {
 
     const [data, setData] = useState([]);
 
-    let url ='http://localhost:8081/api/historial/findall'; //poner aqui url de la api a usar
+    let url ='http://localhost:8091/api/historial/findall'; //poner aqui url de la api a usar
  fetch(url)
      .then(response=> response.json())
      .then(data=> mostrarData(data))
