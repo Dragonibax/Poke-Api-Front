@@ -6,6 +6,12 @@ const linksNoUser =[{
   label : 'Inicio',
   route : '/'
 },{
+  label : 'Historial',
+  route : '/search'
+},{
+  label : 'Combates',
+  route : '/battle'
+},{
   label : 'Cuenta',
   route : '/user'
 }]
@@ -13,7 +19,7 @@ const linksUser =[{
   label : 'Inicio',
   route : '/'
 },{
-  label : 'Busqueda',
+  label : 'Historial',
   route : '/search'
 },{
   label : 'Combates',
