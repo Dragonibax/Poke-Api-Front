@@ -5,8 +5,8 @@ export default function battle ( ) {
     <>
 
   <div className={`${commonStyles.backgroundContainercombat} ${commonStyles.pageContainercombat}`}>
-    <h1 className="battletitles">Seccion de combates</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam urna lectus, pellentesque quis cursus accumsan, posuere in erat. Vestibulum vel pellentesque sapien, vitae feugiat ex. Mauris eget suscipit orci, et porttitor sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec accumsan felis, quis egestas ex. Vestibulum rutrum dolor ante, ut sodales metus efficitur eu. Fusce convallis tortor in augue lacinia, sed placerat mauris ullamcorper. Duis rhoncus ut enim sit amet blandit.</p>
+    <h1 className={`${commonStyles.battletitles}`}>Sección de combates</h1>
+    <p className={`${commonStyles.battletitles2}`}>En la sección de combates de un juego de Pokémon, el jugador tiene la oportunidad de enfrentarse a otros Pokémon en emocionantes duelos. Al inicio del combate, se presenta una pantalla donde puedes elegir de tu equipo el Pokémon con el que deseas luchar. Cada Pokémon tiene sus propias habilidades y estadísticas, incluyendo tipos de movimientos como ataque, defensa, y habilidades especiales.</p>
       <Link className="btn10" href={"/battle/starbattle"}>
                     Iniciar Batalla
       </Link>

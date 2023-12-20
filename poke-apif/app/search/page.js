@@ -48,7 +48,7 @@ export default function search ( ) {
                 <th>USUARIO</th>
                 <th>APUESTA DE TIEMPO</th>
                 <th>GANADOR</th>
-                <th>IDPOKEMON</th>
+                <th>ID POKEMON</th>
                 <th>POKEMON</th>
                 <th>TIPO</th>
                 <th>MOVIMIENTOS</th>

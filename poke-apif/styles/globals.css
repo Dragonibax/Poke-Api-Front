@@ -26,6 +26,12 @@ body {
    color: rgb(255, 255, 255); 
   text-shadow: 1px 2px 2px rgb(5, 52, 103);
 }
+.battletext{
+  font-size: 20px;
+  text-align: center;
+   color: rgb(255, 255, 255); 
+  text-shadow: 1px 2px 2px rgb(5, 52, 103);
+}
 
 a {
   color: inherit;
@@ -95,7 +101,7 @@ table{
 }
 
 thead{
-  background: rgba(232, 235, 42, 0.4);
+  background: rgba(42, 129, 235, 0.4);
   max-width: 100vh;
   min-width: 90vh;
 }
@@ -227,12 +233,7 @@ tbody tr:hover{
   font-weight: 300;
 }
 
-.battletext{
-  font-size: 20px;
-  font-style: oblique;
-  text-align: center;
-  border-color: black;
-}
+
 
 .battle-content{
   align-items: center;
@@ -269,7 +270,7 @@ tbody tr:hover{
 
 .tablehistori{
   color: black;
-  font-size: 15px;
+  font-size: 12.2px;
   max-width: 100vh;
   margin: 25px;
 }
