@@ -1,6 +1,6 @@
 import {UserProvider} from "./components/Context/UserContextProvider";
 import Link from "next/link";
-
+import commonStyles from './user/common-styles.module.css';
 export default function HomePage ( ) {
   return (
     <>

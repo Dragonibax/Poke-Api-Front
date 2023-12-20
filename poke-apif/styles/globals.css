@@ -14,7 +14,7 @@ body {
     background-color: black;
     background-image: url("/poke-apif/public/pika.jpg");*/
     
-    background: url('https://i.pinimg.com/564x/65/ba/e5/65bae579b362f3277582332a390cca16.jpg') no-repeat ;
+    background: url('https://pbs.twimg.com/media/D-EkX_hWkAEXeok.jpg:large') no-repeat ;
     background-size: cover;
     min-height: 100vh;
    
@@ -23,7 +23,8 @@ body {
 .home{
   font-size: 20px;
   text-align: center;
-  color: azure;
+   color: rgb(255, 255, 255); 
+  text-shadow: 1px 2px 2px rgb(5, 52, 103);
 }
 
 a {
